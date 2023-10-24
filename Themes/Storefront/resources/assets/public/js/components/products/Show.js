@@ -189,11 +189,12 @@ export default {
         addNewReview() {
             var formData = new FormData();
             this.addingNewReview = true;
-            formData.append('reviewer_attachment', $('#attachmentFile')[0].files[0]);
 
-            // Append other form data
+            formData.append('reviewer_attachment', $('#attachmentFile')[0].files[0]);
             formData.append('rating', this.reviewForm.rating);
             formData.append('reviewer_name', this.reviewForm.reviewer_name);
+
+            console.log('Form DATA',formData)
 
             $.ajax({
                 method: 'POST',

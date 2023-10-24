@@ -72,6 +72,8 @@
                 'storefront::product_card.seconds': '{{ trans('storefront::product_card.seconds') }}'
             },
         };
+
+
     </script>
 
     {!! $schemaMarkup->toScript() !!}

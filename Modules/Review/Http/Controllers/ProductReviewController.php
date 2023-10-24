@@ -5,7 +5,9 @@ namespace Modules\Review\Http\Controllers;
 
 use Modules\Media\Entities\File;
 use Illuminate\Support\Facades\Storage;
+use Modules\User\Entities\User;
 use Modules\Review\Entities\Review;
+use Modules\Review\Entities\Rewards;
 use Modules\Product\Entities\Product;
 use Modules\Review\Http\Requests\StoreReviewRequest;
 
@@ -41,8 +43,8 @@ class ProductReviewController
             info([$path]);
         }
 
-        info('Path');
-        return Product::findOrFail($productId)
+
+        $review = Product::findOrFail($productId)
             ->reviews()
             ->create([
                 'reviewer_id' => auth()->id(),
@@ -51,5 +53,20 @@ class ProductReviewController
                 'comment' => $request->comment,
                 'is_approved' => setting('auto_approve_reviews', 0),
             ]);
+
+        $point = 2;
+
+        Rewards::create([
+            'user_id' => auth()->id(),
+            'action' => 'Product Review',
+            'action_id' =>  $review->id,
+            'points' => $point,
+        ]);
+
+        $user = User::find(auth()->id());
+        $user->reward_balance =   $user->reward_balance + $point;
+        $user->save();
+
+        return $review;
     }
 }

@@ -5,6 +5,7 @@ namespace Modules\User\Entities;
 use Modules\Order\Entities\Order;
 use Modules\User\Admin\UserTable;
 use Modules\Review\Entities\Review;
+use Modules\Review\Entities\Rewards;
 use Illuminate\Auth\Authenticatable;
 use Modules\Address\Entities\Address;
 use Modules\Product\Entities\Product;
@@ -180,6 +181,16 @@ class User extends EloquentUser implements AuthenticatableContract
     public function reviews()
     {
         return $this->hasMany(Review::class, 'reviewer_id');
+    }
+
+        /**
+     * Get the reviews of the user.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function rewards()
+    {
+        return $this->hasMany(Rewards::class, 'user_id');
     }
 
     /**

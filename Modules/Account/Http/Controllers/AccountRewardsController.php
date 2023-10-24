@@ -11,6 +11,10 @@ class AccountRewardsController
      */
     public function index()
     {
-        return view('public.account.rewards.index');
+        $rewards = auth()->user()
+                    ->rewards()
+                    ->paginate(20);
+
+        return view('public.account.rewards.index', compact('rewards'));
     }
 }

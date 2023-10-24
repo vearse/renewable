@@ -10,7 +10,7 @@ return [
         'my_account' => 'My Account',
         'dashboard' => 'Dashboard',
         'my_orders' => 'My Orders',
-        'my_rewards' => 'My Rewards',
+        'my_rewards' => 'Rewards',
         'my_downloads' => 'My Downloads',
         'my_wishlist' => 'My Wishlist',
         'my_reviews' => 'My Reviews',

@@ -24,7 +24,7 @@ class StoreReviewRequest extends Request
             'rating' => 'required|numeric',
             'reviewer_name' => 'required',
             'comment' => 'required',
-            'reviewer_attachment' => 'file',
+            'reviewer_attachment' => 'file|mimes:jpg,jpeg,png|max:2048',
             // 'captcha' => 'required|captcha',
         ];
     }

@@ -1,102 +1,4 @@
-<style>
-    ._13sFCC ._2jr1F_ {
-        -webkit-flex-basis: 16.66%;
-        -ms-flex-preferred-size: 16.66%;
-        flex-basis: 16.66%;
-        list-style: none;
-    }
 
-    ._13sFCC ._28Xb_u {
-        padding: 1px 0 0;
-        height: 20px;
-    }
-
-    ._13sFCC ._2Plkj9 {
-        -webkit-flex-basis: 58.33%;
-        -ms-flex-preferred-size: 58.33%;
-        flex-basis: 58.33%;
-        list-style: none;
-    }
-
-    ._13sFCC ._28Xb_u {
-        padding: 1px 0 0;
-        height: 20px;
-    }
-
-    ._3UaKsS, ._3UaKsS .EkB-Xt {
-        height: 5px;
-        border-radius: 100px;
-    }
-
-    ._3UaKsS {
-        position: relative;
-        background: #f0f0f0;
-        margin-top: 7px;
-        margin-left: 7px;
-    }
-
-    ._3UaKsS ._1ia31G, ._3UaKsS ._1z2lGe, ._3UaKsS ._2fGXyl {
-        background-color: #388e3c;
-    }
-
-    ._3UaKsS .EkB-Xt {
-        left: 0;
-        position: absolute;
-        width: 0;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-        -webkit-transform-origin: left center;
-        transform-origin: left center;
-        transition: -webkit-transform .4s cubic-bezier(0,0,.3,1) .3s;
-        transition: transform .4s cubic-bezier(0,0,.3,1) .3s;
-        transition: transform .4s cubic-bezier(0,0,.3,1) .3s,-webkit-transform .4s cubic-bezier(0,0,.3,1) .3s;
-    }
-
-    ._3UaKsS ._1ia31G, ._3UaKsS ._1z2lGe, ._3UaKsS ._2fGXyl {
-        background-color: #388e3c;
-    }
-
-    ._3UaKsS .EkB-Xt {
-        left: 0;
-        position: absolute;
-        width: 0;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-        -webkit-transform-origin: left center;
-        transform-origin: left center;
-        transition: -webkit-transform .4s cubic-bezier(0,0,.3,1) .3s;
-        transition: transform .4s cubic-bezier(0,0,.3,1) .3s;
-        transition: transform .4s cubic-bezier(0,0,.3,1) .3s,-webkit-transform .4s cubic-bezier(0,0,.3,1) .3s;
-    }
-
-    ._13sFCC ._36LmXx {
-        -webkit-flex-basis: 25%;
-        -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
-        list-style: none;
-    }
-
-    ._13sFCC ._28Xb_u {
-        padding: 1px 0 0;
-        height: 20px;
-    }
-
-    ._13sFCC ._1uJVNT {
-        font-size: 12px;
-        color: #878787;
-        padding: 0 5px 0 12px;
-    }
-
-    ._2afbiS {
-        font-size: 14px;
-        color: #878787;
-        width: 100%;
-        text-align: center;
-        white-space: normal;
-        overflow-wrap: break-word;
-    }
-
-</style>
 
 @if (setting('reviews_enabled'))
     <div id="reviews" class="tab-pane reviews" :class="{ active: activeTab === 'reviews' }">
@@ -136,10 +38,10 @@
 
                                     </div>
                                     <div class="">
-                                        <div class="_2afbiS"><span>5,008 Ratings &amp;</span></div>
+                                        <div class="_2afbiS"><span>0 Ratings &amp;</span></div>
                                     </div>
                                     <div class="">
-                                        <div class="_2afbiS"><span>284 Reviews</span></div>
+                                        <div class="_2afbiS"><span>0 Reviews</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -160,11 +62,11 @@
                                         <li class="_28Xb_u"><div><div class="_3UaKsS"><span class="EkB-Xt _2W5rgh" style="width: 13.9142%;"></span></div></div></li>
                                     </ul>
                                     <ul class="_36LmXx">
-                                        <li class="_28Xb_u"><div class="_1uJVNT">2,961</div></li>
-                                        <li class="_28Xb_u"><div class="_1uJVNT">1,030</div></li>
-                                        <li class="_28Xb_u"><div class="_1uJVNT">440</div></li>
-                                        <li class="_28Xb_u"><div class="_1uJVNT">165</div></li>
-                                        <li class="_28Xb_u"><div class="_1uJVNT">412</div></li>
+                                        <li class="_28Xb_u"><div class="_1uJVNT">0</div></li>
+                                        <li class="_28Xb_u"><div class="_1uJVNT">0</div></li>
+                                        <li class="_28Xb_u"><div class="_1uJVNT">0</div></li>
+                                        <li class="_28Xb_u"><div class="_1uJVNT">0</div></li>
+                                        <li class="_28Xb_u"><div class="_1uJVNT">0</div></li>
                                     </ul>
                                 </div>
                             </div>
@@ -196,7 +98,7 @@
             <div class="col-xl-9 col-lg-18">
                <div class="review-form-wrap border p-3">
                     <!--  -->
-                    <form @submit.prevent="addNewReview"  enctype="multipart/form-data" @input="errors.clear($event.target.name)">
+                    <form @submit.prevent="addNewReview()"  enctype="multipart/form-data" @input="errors.clear($event.target.name)">
                         <div class="review-form">
                             <h4>{{ trans('storefront::product.add_a_review') }}</h4>
 
