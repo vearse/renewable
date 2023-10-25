@@ -27,9 +27,8 @@
                                         <span v-text="address.full_name"></span>
                                         <span v-text="address.address_1"></span>
                                         <span v-if="address.address_2" v-text="address.address_2"></span>
-                                        <span>@{{ address.city }}, @{{ address.state_name }}
-                                            @{{ address.zip }}</span>
-                                        <span v-text="address.country_name"></span>
+                                        <span>@{{ address.city }}, @{{ address.state_name }} </span>
+                                        <!-- <span v-text="address.country_name"></span> -->
                                     </div>
 
                                     <div class="address-card-actions">
@@ -127,7 +126,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-9">
+                                <!-- <div class="col-md-9">
                                     <div class="form-group">
                                         <label for="zip">
                                             {{ trans('storefront::account.addresses.zip') }}<span>*</span>
@@ -139,9 +138,9 @@
                                         <span class="error-message" v-if="errors.has('zip')" v-text="errors.get('zip')">
                                         </span>
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <div class="col-md-9">
+                                <!-- <div class="col-md-9">
                                     <div class="form-group">
                                         <label for="country">
                                             {{ trans('storefront::account.addresses.country') }}<span>*</span>
@@ -158,7 +157,7 @@
                                             v-text="errors.get('country')">
                                         </span>
                                     </div>
-                                </div>
+                                </div> -->
 
                                 <div class="col-md-9">
                                     <div class="form-group">

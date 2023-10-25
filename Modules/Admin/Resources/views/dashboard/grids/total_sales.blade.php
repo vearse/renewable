@@ -3,6 +3,9 @@
         <h4>{{ trans('admin::dashboard.total_sales') }}</h4>
 
         <i class="fa fa-money pull-left" aria-hidden="true"></i>
-        <span class="pull-right">{{ $totalSales->format() }}</span>
+        <span class="pull-right">
+            {{ $totalSales->format() }}
+            ({{ $totalSales->format() }})
+        </span>
     </div>
 </div>

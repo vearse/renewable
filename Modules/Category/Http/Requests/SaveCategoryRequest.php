@@ -24,6 +24,7 @@ class SaveCategoryRequest extends Request
     {
         return [
             'name' => 'required',
+            'description' => 'required|max:512',
             'slug' => $this->getSlugRules(),
             'is_active' => 'required|boolean',
             'is_active' => 'required|boolean',

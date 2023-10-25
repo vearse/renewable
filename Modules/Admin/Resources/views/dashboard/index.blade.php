@@ -8,6 +8,16 @@
 
 @section('content')
     <div class="grid clearfix">
+
+        <div class="row">
+            <div class="pull-right">
+            <select name="attributes[<%- attributeId %>][attribute_id]" class="form-control attribute custom-select-black" id="attributes.<%- attributeId %>.attribute_id" data-attribute-id="<%- attributeId %>">
+                    <option value="">{{ trans('admin::admin.form.please_select') }}</option>
+                <option value="7">& Days</option>
+
+                </select>
+            </div>
+        </div>
         <div class="row">
             @hasAccess('admin.orders.index')
                 @include('admin::dashboard.grids.total_sales')

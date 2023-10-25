@@ -2,7 +2,7 @@
 
 return [
     'dashboard' => 'Dashboard',
-    'total_sales' => 'Total Sales',
+    'total_sales' => 'Total Sales(Commission Earned)',
     'total_orders' => 'Total Orders',
     'total_products' => 'Total Products',
     'total_customers' => 'Total Customers',
