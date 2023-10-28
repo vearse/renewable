@@ -27,7 +27,7 @@ class CategoryController
     /**
      * View path of the resource.
      *
-     * @var string
+     * @var string~
      */
     protected $viewPath = 'category::admin.categories';
 
